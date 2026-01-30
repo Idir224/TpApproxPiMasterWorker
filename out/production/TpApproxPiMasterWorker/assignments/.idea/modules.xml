@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PiMasterWorker/PiMasterWorker.iml" filepath="$PROJECT_DIR$/PiMasterWorker/PiMasterWorker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TpApproxPiMasterWorker.iml" filepath="$PROJECT_DIR$/TpApproxPiMasterWorker.iml" />
+    </modules>
+  </component>
+</project>
