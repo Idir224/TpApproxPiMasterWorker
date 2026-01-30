@@ -1,8 +1,5 @@
 // Estimate the value of Pi using Monte-Carlo Method, using parallel program
 package assignments.PiMonteCarlo;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Assignment102 {
 	public static void main(String[] args) {
@@ -10,10 +7,13 @@ public class Assignment102 {
 		long startTime = System.currentTimeMillis();
 		double value = PiVal.getPi();
 		long stopTime = System.currentTimeMillis();
-		System.out.println("Approx value:" + value);
-		System.out.println("Difference to exact value of pi: " + (value - Math.PI));
-		System.out.println("Error: " + (value - Math.PI) / Math.PI * 100 + " %");
-		System.out.println("Available processors: " + Runtime.getRuntime().availableProcessors());
-		System.out.println("Time Duration: " + (stopTime - startTime) + "ms");
+        System.out.println("\nPi : " + value);
+        System.out.println("Error: " + (Math.abs((value - Math.PI)) / Math.PI) + "\n");
+
+        System.out.println("Ntot: " + PiVal.nThrows);
+        System.out.println("Available processors: " + Runtime.getRuntime().availableProcessors());
+        System.out.println("Time Duration (ms): " + (stopTime - startTime) + "\n");
+
+        System.out.println((Math.abs((value - Math.PI)) / Math.PI) + " " + PiVal.nThrows + " " + Runtime.getRuntime().availableProcessors() + " " + (stopTime - startTime));
 	}
 }
